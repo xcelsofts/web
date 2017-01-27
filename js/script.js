@@ -33,29 +33,29 @@ $(function () {
 
 	function scrollto(hash) {
 		console.log(hash);
-		$('html, body').finish().animate({
+		$('html, body').stop().animate({
 			scrollTop: $(hash).offset().top
 		}, 1500, 'easeInOutExpo', function() {
 			location.hash = hash;
 		});
 	}
 
-	// $('body').on('keydown', function(event) {
-	//
-	// 	var currentHash = location.hash || "#home";
-	// 	if (event.keyCode === 40) {// down
-	// 		var nextSection = $('section' + currentHash).next();
-	// 		var nextHash = nextSection[0] ? "#" + nextSection[0].id : "#home";
-	// 		scrollto(nextHash);
-	// 		event.preventDefault();
-	// 	} else if (event.keyCode === 38) {
-	// 		var prevSection = $('section' + currentHash).prev();
-	// 		var prevHash = prevSection[0] ? "#" + prevSection[0].id : "#home";
-	// 		scrollto(prevHash);
-	// 		event.preventDefault();
-	// 	}
-	//
-	// })
+	$('body').on('keydown', function(event) {
+
+		var currentHash = location.hash || "#home";
+		if (event.keyCode === 40) {// down
+			var nextSection = $('section' + currentHash).next();
+			var nextHash = nextSection[0] ? "#" + nextSection[0].id : "#home";
+			scrollto(nextHash);
+			event.stopPropagation();
+		} else if (event.keyCode === 38) {
+			var prevSection = $('section' + currentHash).prev();
+			var prevHash = prevSection[0] ? "#" + prevSection[0].id : "#home";
+			scrollto(prevHash);
+			event.stopPropagation();
+		}
+
+	})
 
 	/*
 	* Fun Fact with Count Animation
