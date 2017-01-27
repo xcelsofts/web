@@ -256,4 +256,11 @@ $(window).load(function () {
 		$('label.btn-main').removeClass('btn-main');
 		$('input[name="filter"]:checked').parent().addClass('btn-main');
 	});
+
+	console.log(location.hash);
+	if (location.hash === '#thankyou') {
+		$('#thankyou-modal').modal();
+	} else if (location.hash === '#error') {
+		$('#error-modal').modal();
+	}
 });
