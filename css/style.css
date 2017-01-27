@@ -1340,6 +1340,7 @@ ul.styled-list.list-star li:before {
 }
 .blog-post .author img {
   border-radius: 50%;
+  max-width: 50px;
 }
 .blog-post .post-meta {
   margin-bottom: 10px;
