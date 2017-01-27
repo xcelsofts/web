@@ -182,17 +182,18 @@ $(function () {
         }
     }
 
+		/*
     $('.contact-form').submit(function () {
       var $this = $(this),
           result = true;
 
-      if(!checkEmpty($this.find('#fname'))){
+      if(!checkEmpty($this.find('#Name'))){
         result=false;
       }
-      if(!validateEmail($this.find('#email'))) {
+      if(!validateEmail($this.find('#Email'))) {
         result=false;
       }
-      if(!checkEmpty($this.find('#mssg'))) {
+      if(!checkEmpty($this.find('#Message'))) {
         result=false;
       }
 
@@ -205,7 +206,7 @@ $(function () {
       var data = $this.serialize();
 
       $.ajax({
-          url: "sender.php",
+          url: "https://secure.mailjol.net/allforms/u/a5b1c394.php",
           type: "POST",
           data: data,
           cache: false,
@@ -231,6 +232,7 @@ $(function () {
 
       return false;
     });
+		*/
 
 
 });
