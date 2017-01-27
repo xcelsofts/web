@@ -531,6 +531,9 @@ h6 {
   -webkit-transition: background-color 0.3s, height 0.3s;
           transition: background-color 0.3s, height 0.3s;
 }
+.navbar-default.internal {
+  background: rgba(0,0,0,0.6);
+}
 .st-navbar-mini .navbar-default {
   background-color: rgba(40, 40, 40, 0.95);
   height: 60px;
@@ -1703,4 +1706,8 @@ footer.site-footer a:hover {
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+body.internal .blog {
+  padding-top: 110px;
 }
